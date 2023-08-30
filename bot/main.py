@@ -9,7 +9,7 @@ from colorama import Fore, Style
 import os
 
 @logging.LogClass
-class KonradooBot(commands.Bot):
+class ThreeBot(commands.Bot):
     def __init__(
         self,
         token,
@@ -26,7 +26,7 @@ class KonradooBot(commands.Bot):
         
     async def on_ready(self):
         self.logger.info(f"Connected to discord as {self.user}. Latency: {round(self.latency*1000)}ms")
-        await self.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"a movie"))
+        await self.change_presence(activity=discord.Activity(type=discord.ActivityType.playing, name="CS:GO"))
         
         await self.load_extensions()
         while not self.loaded:

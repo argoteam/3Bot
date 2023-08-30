@@ -20,7 +20,7 @@ import asyncio
 import platform
 import getpass
 import os
-from bot.main import KonradooBot
+from bot.main import ThreeBot
 import time
 from dotenv import load_dotenv
 
@@ -60,5 +60,5 @@ except:
 logger.info(f"Initializing 3bot on device [{device}], PID: {pid}")
 logger.info(f"{path_to} started by {effective_user}")
 
-bot = KonradooBot(TOKEN, APP_ID)
+bot = ThreeBot(TOKEN, APP_ID)
 bot.run_bot()
